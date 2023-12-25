@@ -1,0 +1,145 @@
+
+
+.container {
+    width: 500px;
+    max-height: 450px;
+    position: fixed;
+    top: 90px;
+    right: 10px;
+    z-index: 59;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+.prop_selected_item_container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #f0f0f0;
+    border-bottom: 1px solid #868484;
+}
+
+.prop_selected_item_left {
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img_container {
+    width: 70px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.img_container img {
+    width: 100%;
+}
+
+.item_name_price_count {
+    width: 40px;
+    height: 50px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item_name_price_count > div {
+    font-size: 25px;
+    font-weight: 600;
+    width: 100px;
+    height: 50px 
+}
+
+.prop_selected_item_right {
+    width: 100px;
+    height: 60px;
+    display: flex;
+}
+
+.prop_selected_item_right > div {
+    width: 33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000000;
+}
+
+.prop_selected_item_right > div:nth-child(2) {
+    background: #ffffff;
+}
+
+.prop_selected_item_right > div >span {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.total_container {
+    width: 100%;
+    padding: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0px 10px 0px;
+}
+
+.total_container > span {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.clear_checkout_container {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.clear_checkout_container button {
+    padding: 7px 15px;
+    background: none;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    transition: 0.3s;
+}
+
+.clear_checkout_container button > span {
+    letter-spacing: 3px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.clear_checkout_container button > span:first-child {
+    margin-right: 20px;
+}
+
+.clear_checkout_container button:last-child {
+    border: 1px solid var(--pink--);
+    color: var(--pink--);
+}
+
+.clear_checkout_container button:last-child:hover {
+    background: var(--pink--);
+    border: 1px solid var(--pink--);
+    color: #000000;
+    cursor: pointer;
+}
+
+.clear_checkout_container button:first-child:hover {
+    background: #000000;
+    color: var(--pink--);
+    cursor: pointer;
+}
+
+.prop_selected_item_right > div:nth-child(1),
+.prop_selected_item_right > div:nth-child(3) {
+    cursor: pointer;
+}

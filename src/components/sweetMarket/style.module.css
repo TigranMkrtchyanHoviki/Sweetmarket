@@ -1,0 +1,9 @@
+
+
+.go_to_up_of_page {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 70px;
+    color: var(--pink--)
+}
