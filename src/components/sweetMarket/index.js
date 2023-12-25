@@ -4,7 +4,7 @@ import About from "../about"
 import Store from "../store"
 import SweetStyles from "./style.module.css"
 import { FaCircleArrowUp } from "react-icons/fa6";
-import { useState, useEffect } from "react"
+import { useState } from "react"
 
 const SweetMarket = () => {
 

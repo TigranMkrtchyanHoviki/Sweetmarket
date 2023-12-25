@@ -73,7 +73,6 @@ const Header = ({ list_all_items, cliced_arrow_activ_home }) => {
                         <li>
                             <Link
                                 onClick={handleSetActive}
-                                activeClass="active"
                                 className={`${active_home && HeaderStyles.active}`}
                                 to="home"
                                 spy={true}

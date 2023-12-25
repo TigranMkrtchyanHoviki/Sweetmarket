@@ -1,10 +1,9 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import StoreStyles from "./style.module.css"
 import { IoIosSearch } from "react-icons/io";
 import { connect } from "react-redux";
 import { FaCartShopping } from "react-icons/fa6";
 import { makeSelect_item } from "../../store/Action";
-import { makeFilterd_list } from "../../store/Action";
 import Spinner from "../spinner";
 import Error from "../error";
 
@@ -13,7 +12,6 @@ const Store = ({ list_all_items, clickSound, Dispatc_select_item }) => {
     const [all_list, setAll_list] = useState([])
     const [isLoading, setIsLoading] = useState(false)
     const [value, setValue] = useState("")
-    const [isError, setIsError] = useState(false)
     const idRef = useRef()
     const cotegories = ["All", "SWEETS", "CUPCAKES", "CAKES", "DOUGNUTS"]
 

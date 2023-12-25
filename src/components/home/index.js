@@ -1,6 +1,3 @@
-
-
-import { useEffect } from "react"
 import HomeStyles from "./style.module.css"
 
 const Home = () => {

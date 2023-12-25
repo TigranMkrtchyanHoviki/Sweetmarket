@@ -1,4 +1,3 @@
-import './App.css';
 import SweetMarket from "./components/sweetMarket";
 
 function App() {
