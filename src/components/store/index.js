@@ -12,6 +12,7 @@ const Store = ({ list_all_items, clickSound, Dispatc_select_item }) => {
     const [all_list, setAll_list] = useState([])
     const [isLoading, setIsLoading] = useState(false)
     const [value, setValue] = useState("")
+    const [isError, setIsError] = useState(false)
     const idRef = useRef()
     const cotegories = ["All", "SWEETS", "CUPCAKES", "CAKES", "DOUGNUTS"]
 
