@@ -6,6 +6,7 @@ import { FaCartShopping } from "react-icons/fa6";
 import { makeSelect_item } from "../../store/Action";
 import Spinner from "../spinner";
 import Error from "../error";
+import PropTypes from 'prop-types'
 
 const Store = ({ list_all_items, clickSound, Dispatc_select_item }) => {
 
@@ -199,6 +200,17 @@ const mapDispatchToProps = (dispatch) => {
     return {
         Dispatc_select_item: (id) => dispatch(makeSelect_item(id)),
     }
+}
+
+Store.propTypes = {
+    list_all_items: PropTypes.array.isRequired,
+    Dispatc_select_item: PropTypes.func.isRequired
+}
+
+Store.defaultProps = {
+    list_all_items: [],
+    clickSound: new Audio(require("../../sound/clickSound.mp3")),
+    Dispatc_select_item(){}
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Store)

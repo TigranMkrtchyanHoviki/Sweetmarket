@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import { useEffect, useState, useCallback } from "react";
 import Cart from "../cart";
 import { Link } from "react-scroll";
+import PropTypes from "prop-types"
 
 
 const Header = ({ list_all_items, cliced_arrow_activ_home }) => {
@@ -148,6 +149,16 @@ const mapStateToProps = (state) => {
     return {
         list_all_items: state.list_all_items,
     }
+}
+
+Header.propTypes = {
+    list_all_items: PropTypes.array.isRequired,
+    cliced_arrow_activ_home: PropTypes.number.isRequired
+}
+
+Header.defaultProps = {
+    list_all_items: [],
+    cliced_arrow_activ_home: 0
 }
 
 export default connect(mapStateToProps, null)(Header)

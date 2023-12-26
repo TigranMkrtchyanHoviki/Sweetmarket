@@ -3,6 +3,7 @@ import { connect } from "react-redux"
 import { makeEraser_action } from "../../store/Action"
 import { makeAdd_count_selected_item } from "../../store/Action"
 import { makeReduce_count_selected_item } from "../../store/Action"
+import PropTypes from "prop-types"
 
 const Cart = ({
     selected_items_count,
@@ -97,6 +98,22 @@ const mapDispatchToProps = (dispatch) => {
         DispatchAdd_count_selected_item: (id) => dispatch(makeAdd_count_selected_item(id)),
         DispatchReduce_count_selected_item: (id) => dispatch(makeReduce_count_selected_item(id))
     }
+}
+
+Cart.propTypes = {
+    selected_items_count: PropTypes.array.isRequired,
+    Chackout: PropTypes.func.isRequired,
+    DispatchClear_all_selected_items: PropTypes.func.isRequired,
+    DispatchAdd_count_selected_item: PropTypes.func.isRequired,
+    DispatchReduce_count_selected_item: PropTypes.func.isRequired
+}
+
+Cart.deafultProps = {
+    selected_items_count: [],
+    clickSound: new Audio(require("../../sound/clickSound.mp3")),
+    DispatchClear_all_selected_items(){},
+    DispatchAdd_count_selected_item(){},
+    DispatchReduce_count_selected_item(){}
 }
 
 export default connect(mapStateToprops, mapDispatchToProps)(Cart)
